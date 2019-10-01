@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+    padding-left: 2.275%;
+	padding-right: 2.275%;
+	width: 92%;
+	max-width: 960px;
+}
+/* Header */
+header {
+	background: #f48221;
+	display: block;
+	min-height: 75px;
+    width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+header .profileLogo .logoPlaceholder {
+    text-align: center;
+	width: 100px;
+}
+header .logoPlaceholder span {
+	color: rgba(255,255,255,1.00);
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 53px;
+    height: 22px;
+    width: 80px;
+}
+header .profileLogo .chevronPlaceholder {
+	color: #ffffff;
+    float: right;
+    font-size: 30px;
+	margin-bottom: 20px;
+}
+header .profileLogo .chevronPlaceholder i {
+	margin-right: 20px;
+}
+header h1 {
+    color: #ffffff;
+    font-weight: normal;
+	text-align: center;
+    width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+/* Main Content sections */
+.mainContent {
+	display: block;
+	margin-top: 150px;
+}
+h2 {
+    background: #332f2e;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+}
+.dot_container {
+    margin: 0 auto;
+    padding-top: 20px;
+	text-align: center; 
+	width: 300px;
+}
+.stretch {
+	content: '';
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.mainContent .profilePhoto {
+	border-right: 1px solid #bebebe;
+    clear: both;
+	text-align: center;
+    width: 259px;
+}
+.mainContent .profilePhoto i {
+	color:#f48221;
+	font-size: 150px;
+    -webkit-box-shadow: 0 10px 10px -10px #000000;
+       -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0 10px 10px -10px #000000;
+}
+.mainContent .profileHeader h3 {
+	color: #262324;
+	font-size: 25px;
+	font-weight: 700;
+    font-family: Arial, sans-serif;
+	line-height: 24px;
+	margin-top: 0;
+}
+.mainContent .profileHeader p {
+    color: #262324;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8;
+	overflow-y: auto;
+}
+
+/* Media query for Mobile devices*/
+@media only screen and (min-width : 285px) and (max-width : 480px) {
+/* Header */
+header {
+    float: none;
+	width: 100%;
+}
+header .profileLogo .logoPlaceholder {
+	display: inline-block;
+}
+/* Main content sections */
+.mainContent .profilePhoto {
+	display: inline-block;
+    border-right: 0 none;
+	margin-bottom: 50px;
+}
+.mainContent .profileHeader {
+	text-align: center;
+}
+.mainContent .profileHeader p {
+	text-align: justify;
+}
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+/* Header */
+header {
+	width: 100%;
+	float: none;
+}
+header .profileLogo .logoPlaceholder {
+	display: inline-block;
+	font-family: Arial, sans-serif;
+}
+/* Main content and sections */
+.mainContent .profilePhoto {
+	float: left;
+	clear: both;
+	margin-right: 3%;
+	margin-top: 5%;
+    width: 160px;
+}
+.mainContent .profileHeader {
+	text-align: left;
+}
+}
+
+/* Desktops and laptops  */
+@media only screen and (min-width:1025px) {
+/* Header */
+header .profileLogo .logoPlaceholder {
+	float: left;
+	margin-bottom: 20px;
+}
+header .profileLogo .chevronPlaceholder {
+	float: right;
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: #ffffff;
+}
+header .profileLogo .chevronPlaceholder i {
+	margin-right: 20px;
+}
+/* Main content sections */
+.mainContent .profilePhoto {
+	float: left;
+	clear: both;
+	margin-right: 3%;
+}
+.mainContent .profileHeader {
+	text-align: left;
+}
+}
+
+/*==================================================
+ * Shadow Effect
+ * ===============================================*/
+.mainContent {
+    position: relative;
+	margin-bottom: 50px;
+}
+.mainContent:before, 
+.mainContent:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.mainContent:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
